@@ -9,6 +9,8 @@ Enter your API key in the following files:
 /src/test/java/TestGoogleProvider.java
 ```
 
+If you don't have a key or a google account, you can create one at https://console.developers.google.com/
+
 Assuming [maven](http://maven.apache.org/) (3.2.1) is installed on your system, after downloading the whole repository, execute the following:
 
 ```
