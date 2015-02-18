@@ -29,6 +29,7 @@ Operations:
 - GetPlaceSuggestionsOp can be used with a generic suggestion widget bound to the address:identification field
 - GetPlaceDetailOp is an operation which can be used to retreive a complete address from an ID
 
+The plugin also includes a Google Maps widget. You can use it in a generic widget with type set to google_maps. 
 
 ## Important Note
 
