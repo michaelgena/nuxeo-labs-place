@@ -1,0 +1,12 @@
+<component name="org.nuxeo.labs.place.test.config.google">
+
+  <extension target="org.nuxeo.labs.place" point="Provider" >
+
+      <Config>
+          <APIkey></APIkey>
+          <providerClass>org.nuxeo.labs.place.providers.google.GoogleMaps</providerClass>
+      </Config>
+      
+   </extension>
+    
+</component>

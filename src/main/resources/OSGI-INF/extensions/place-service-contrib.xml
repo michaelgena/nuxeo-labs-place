@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.place">
+
+ 	<implementation class="org.nuxeo.labs.place.service.PlaceServiceImpl" />
+
+	<service>
+		<provide interface="org.nuxeo.labs.place.service.PlaceService" />
+	</service>
+
+	<extension-point name="Provider">
+		<documentation>
+		</documentation>
+		<object class="org.nuxeo.labs.place.service.ProviderDescriptor" />
+	</extension-point>
+
+</component>
+

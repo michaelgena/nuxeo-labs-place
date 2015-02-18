@@ -1,0 +1,9 @@
+<component name="org.nuxeo.labs.place.operations">
+
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations" >
+      <operation class="org.nuxeo.labs.place.operation.GetPlaceSuggestionsOp" />
+      <operation class="org.nuxeo.labs.place.operation.GetPlaceDetailOp" />
+   </extension>
+    
+</component>

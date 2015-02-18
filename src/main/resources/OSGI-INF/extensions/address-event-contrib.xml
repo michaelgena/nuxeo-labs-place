@@ -1,0 +1,43 @@
+<component name="org.nuxeo.labs.place.event">
+    <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="event-handlers">
+        <handler chainId="EH-GetAddressdetailonCreated">
+            <event>documentCreated</event>
+            <filters>
+                <facet>address</facet>
+                <attribute>Regular Document</attribute>
+            </filters>
+        </handler>
+    </extension>
+
+    <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="event-handlers">
+        <handler chainId="EH-GetAddressdetailBeforeUpdate">
+            <event>beforeDocumentModification</event>
+            <filters>
+                <facet>address</facet>
+                <attribute>Regular Document</attribute>
+            </filters>
+        </handler>
+    </extension>
+    
+    
+    <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+        <chain id="EH-GetAddressdetailonCreated">
+            <operation id="Context.FetchDocument"/>
+            <operation id="GetPlaceDetailOp">
+                <param type="string" name="id">expr:Document["address:identification"]</param>
+                <param type="boolean" name="save">true</param>
+            </operation>
+        </chain>
+    </extension>
+
+    <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+        <chain id="EH-GetAddressdetailBeforeUpdate">
+            <operation id="Context.FetchDocument"/>
+            <operation id="GetPlaceDetailOp">
+                <param type="string" name="id">expr:Document["address:identification"]</param>
+                <param type="boolean" name="save">false</param>
+            </operation>
+        </chain>
+    </extension>
+    
+</component>

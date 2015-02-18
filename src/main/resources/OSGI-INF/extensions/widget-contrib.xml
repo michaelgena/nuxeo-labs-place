@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.place.jsf.layout">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgettypes">
+
+    <widgetType name="google_maps">
+      <configuration>
+        <title>Google Maps</title>
+        <description>
+          <p>
+            Displays a maps from Google Maps
+          </p>
+        </description>
+        <supportedModes>
+          <mode>view</mode>
+        </supportedModes>
+      </configuration>
+      <handler-class>
+        org.nuxeo.ecm.platform.forms.layout.facelets.plugins.TemplateWidgetTypeHandler
+      </handler-class>
+      <property name="template">/widgets/google_maps_template.xhtml</property>
+    </widgetType>
+  </extension>
+
+</component>

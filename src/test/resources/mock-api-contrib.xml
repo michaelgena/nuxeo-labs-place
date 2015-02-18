@@ -1,0 +1,11 @@
+<component name="org.nuxeo.labs.place.test.config.google">
+
+  <extension target="org.nuxeo.labs.place" point="Provider" >
+
+      <Config>
+          <providerClass>org.nuxeo.labs.place.test.mock.MockPlaceProvider</providerClass>
+      </Config>
+      
+   </extension>
+    
+</component>
