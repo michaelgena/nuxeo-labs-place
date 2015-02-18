@@ -46,7 +46,7 @@ public class TestGoogleProvider extends TestCase {
 
     @Test
     public void testGetDetailUS() throws Exception {
-        GoogleMaps maps = new GoogleMaps("AIzaSyBGtpsz1HItGxjm70MtC9JS45shZmQ7BK0");
+        GoogleMaps maps = new GoogleMaps(API_KEY);
         Place place  = maps.getPlaceDetail("Ei4zIFBlYWNodHJlZSBTdHJlZXQsIEF0bGFudGEsIEdBLCBVbml0ZWQgU3RhdGVz");
         Assert.assertNotNull(place);
         Assert.assertEquals("Atlanta", place.getCity());
